@@ -14,10 +14,13 @@ test("verify user able to Add Tags ", async ({ page }) => {
   await releasetag.createReleaseTag();
 });
 
-test("verify user able to Edit Tags", async ({ page }) => {
-  const editreleasetag = new releaseTags(page);
-  await editreleasetag.editReleaseTag();
+test("verify user able to edit Tags ", async ({ page }) => {
+  const releasetag = new releaseTags(page);
+  await releasetag.editReleaseTag();
 });
+
+
+
 test("verify user able to Delete Tags", async ({ page }) => {
   const deletereleasetag = new releaseTags(page);
   await deletereleasetag.deleteReleaseTag();
